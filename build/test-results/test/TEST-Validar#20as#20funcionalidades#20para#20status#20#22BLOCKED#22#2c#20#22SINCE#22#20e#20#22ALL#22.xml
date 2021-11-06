@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Validar as funcionalidades para status &quot;BLOCKED&quot;, &quot;SINCE&quot; e &quot;ALL&quot;" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-06T15:11:59" hostname="NI-INV2393" time="0.127">
+  <properties/>
+  <testcase name="Deve validar que no response o usuário esta enableToLetter = 'true'" classname="Validar as funcionalidades para status &quot;BLOCKED&quot;, &quot;SINCE&quot; e &quot;ALL&quot;" time="0.127"/>
+  <system-out><![CDATA[
+@CUSTOMER-STATUS-CONTROLLER @CUSTOMER_STATUS_SELLER_CT_01 @customerStatus @validado
+Cenário: Deve validar que no response o usuário esta enableToLetter = 'true'              # ///home/idd_umoreira/Área de Trabalho/prototipos/RestAssured with Java/src/test/resources/features/example.feature:13
+  Dado que todas as massas estão iniciadas                                                # steps.GetStep.queTodasAsMassasEstãoIniciadas()
+  Dado que acesso a rota "/status" para o projeto "validator"                             # steps.GetStep.queAcessoARotaParaOProjeto(java.lang.String,java.lang.String)
+  Quando realizo a requisição pelo "seller" informando mes e ano o status deve ser "true" # steps.GetStep.realizoARequisiçãoPeloInformandoMesEAnoOStatusDeveSer(java.lang.String,java.lang.String)
+  Então é retornado para a requisição o status code "200"                                 # steps.GetStep.éRetornadoParaARequisiçãoOStatusCode(java.lang.String)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
