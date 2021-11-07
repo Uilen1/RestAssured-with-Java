@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        tags = "",
+        tags = "@teste",
         features = "src/test/resources/features",
         glue = "steps",
         monochrome = true,

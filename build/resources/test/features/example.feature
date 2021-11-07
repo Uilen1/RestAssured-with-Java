@@ -2,15 +2,21 @@
 #coding: utf-8
 
 @CUSTOMER-STATUS-CONTROLLER
-Funcionalidade: Validar as funcionalidades para status "BLOCKED", "SINCE" e "ALL"
+Funcionalidade: Validar alguns endpoints
   Como um usuário
-  Eu quero validar que somente usuários permitidos solicitem a carta, de acordo com os status
+  Eu quero validar alguns endpoints a fim de aprender melhor as ferramentas
 
-  Contexto:
-    Dado que todas as massas estão iniciadas
+ Contexto: Deve iniciar as massas
+   Dado que todas as massas estão iniciadas
 
-  @CUSTOMER_STATUS_SELLER_CT_01 @customerStatus @validado
-  Cenário: Deve validar que no response o usuário esta enableToLetter = 'true'
-    Dado que acesso a rota "/status" para o projeto "validator"
-    Quando realizo a requisição pelo "seller" informando mes e ano o status deve ser "true"
+  @validado
+  Cenário: Deve a lista de usuários
+    Dado que acesso a rota "/users"
+    Quando busco a lista de usuários na rota
     Então é retornado para a requisição o status code "200"
+
+  @teste
+  Cenário: Deve inserir usuário
+    Dado que acesso a rota "/users"
+    Quando insiro um usuário
+    Então é retornado para a requisição o status code "201"
