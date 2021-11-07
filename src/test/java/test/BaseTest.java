@@ -10,6 +10,10 @@ import org.hamcrest.Matchers;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 
+/**
+ * Classe que contém todas as confiturações de execução do projeto
+ */
+
 @RunWith(Cucumber.class)
 @CucumberOptions(
         tags = "@validado",
@@ -27,6 +31,9 @@ import org.junit.runner.RunWith;
 )
 public class BaseTest implements Constants {
 
+/**
+ * Configurações que serão executadas uma vez, antes de todos os testes serem iniciados
+ */
         @BeforeClass
         public static void setup (){
                 RestAssured.baseURI = APP_BASE_URL;

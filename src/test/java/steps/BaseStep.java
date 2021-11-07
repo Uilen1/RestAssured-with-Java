@@ -12,7 +12,9 @@ import java.util.List;
 
 public class BaseStep {
 
-    /*Inicia as massas que serão utilizadas nas automações*/
+/**
+ * Inicia as massas que serão utilizadas nas automações
+ */
 
     protected static ExampleBean getExampleBean = new ExampleBean();
 

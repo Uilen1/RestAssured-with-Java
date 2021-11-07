@@ -11,7 +11,9 @@ import static org.hamcrest.Matchers.*;
 
 public class ExampleStep {
 
-    /*É criado os metódos de validações das APIS conforme descrito na feature*/
+/**
+ * É criado os metódos de validações das APIS conforme descrito na feature
+ */
 
     protected ValidatableResponse validatableResponse;
     protected String rota;
