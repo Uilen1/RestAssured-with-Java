@@ -15,7 +15,7 @@ Funcionalidade: Validar alguns endpoints
     Quando busco a lista de usuários na rota
     Então é retornado para a requisição o status code "200"
 
-  @teste
+  @validado
   Cenário: Deve inserir usuário
     Dado que acesso a rota "/users"
     Quando insiro um usuário

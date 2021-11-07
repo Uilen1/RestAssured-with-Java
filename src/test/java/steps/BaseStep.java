@@ -11,6 +11,9 @@ import java.io.IOException;
 import java.util.List;
 
 public class BaseStep {
+
+    /*Inicia as massas que serão utilizadas nas automações*/
+
     protected static ExampleBean getExampleBean = new ExampleBean();
 
     @Dado("que todas as massas estão iniciadas")

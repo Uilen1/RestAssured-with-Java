@@ -12,12 +12,12 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        tags = "@teste",
+        tags = "@validado",
         features = "src/test/resources/features",
         glue = "steps",
         monochrome = true,
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        publish = true,
+        publish = false,
         plugin = {
             "pretty",
             "html:target/cucumber-reports",

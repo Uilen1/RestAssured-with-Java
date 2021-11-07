@@ -1,6 +1,9 @@
 package bean;
 
 public class ExampleBean {
+
+    /*Classe para receber as massas de dados que serão utilizadas nos testes*/
+
     private String name;
     private String job;
 
