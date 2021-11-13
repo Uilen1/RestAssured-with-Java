@@ -21,7 +21,7 @@ import org.junit.runner.RunWith;
         glue = "steps",
         monochrome = true,
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        publish = false,
+        publish = true,
         plugin = {
             "pretty",
             "html:target/cucumber-reports",
