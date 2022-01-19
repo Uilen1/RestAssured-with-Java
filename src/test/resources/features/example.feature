@@ -4,7 +4,7 @@
 @CUSTOMER-STATUS-CONTROLLER
 Funcionalidade: Validar alguns endpoints
   Como um usuário
-  Eu quero validar alguns endpoints a fim de aprender melhor as ferramentas
+  Eu quero validar alguns endpoints do site de teste "https://reqres.in/" a fim de aprender melhor sobre Rest Assured
 
  Contexto: Deve iniciar as massas
    Dado que todas as massas estão iniciadas
@@ -18,7 +18,7 @@ Funcionalidade: Validar alguns endpoints
   @validado
   Esquema do Cenário: Deve obter a lista de usuários com queryParam
     Dado que acesso a rota "<rota>"
-    Quando busco a lista de usuários por pathParam
+    Quando busco a lista de usuários por queryParam
     E valido as informações para o usuário "<usuario>" com o id "<id>"
     Então é retornado para a requisição o status code "<status>"
 

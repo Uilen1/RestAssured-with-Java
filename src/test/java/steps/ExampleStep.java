@@ -4,14 +4,12 @@ import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
-import io.restassured.internal.ValidatableResponseImpl;
 import io.restassured.response.ValidatableResponse;
 
 import java.util.Arrays;
 
-import static io.restassured.RestAssured.*;
-import static io.restassured.matcher.RestAssuredMatchers.*;
-import static org.hamcrest.Matchers.*;
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.is;
 
 public class ExampleStep {
 
@@ -48,7 +46,7 @@ public class ExampleStep {
         }
     }
 
-    @Quando("busco a lista de usuários por pathParam")
+    @Quando("busco a lista de usuários por queryParam")
     public void buscoAListaDeUsuáriosPorPathParam() throws Exception {
         try {
             validatableResponse = given()
