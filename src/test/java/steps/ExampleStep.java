@@ -4,11 +4,12 @@ import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
+import io.restassured.RestAssured;
 import io.restassured.response.ValidatableResponse;
 
 import java.util.Arrays;
 
-import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.is;
 
 public class ExampleStep {
@@ -34,11 +35,12 @@ public class ExampleStep {
     @Quando("busco a lista de usuários na rota")
     public void buscoAListaDeUsuáriosNaRota() throws Exception {
         try {
-            validatableResponse = given()
+            validatableResponse =
+                    given()
                     .when()
-                    .get(rota)
+                        .get(rota)
                     .then()
-                    .log().all()
+                        .log().all()
             ;
 
         } catch (Exception e){
@@ -49,12 +51,13 @@ public class ExampleStep {
     @Quando("busco a lista de usuários por queryParam")
     public void buscoAListaDeUsuáriosPorPathParam() throws Exception {
         try {
-            validatableResponse = given()
-                    .queryParam("page",2)
+            validatableResponse =
+                    given()
+                        .queryParam("page",2)
                     .when()
-                    .get(rota)
+                        .get(rota)
                     .then()
-                    .log().all()
+                        .log().all()
             ;
 
         } catch (Exception e){
