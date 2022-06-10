@@ -1,11 +1,10 @@
 pipeline {
 
     agent any
-    def gradle = "./gradlew"
     stages {
         stage('Clean & Build') {
             steps {
-                sh '${gradle} clean'
+                sh './gradlew clean'
             }
         }
 
@@ -51,3 +50,4 @@ pipeline {
             }
         }
     }
+}
