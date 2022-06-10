@@ -9,13 +9,13 @@ Funcionalidade: Validar alguns endpoints
  Contexto: Deve iniciar as massas
    Dado que todas as massas estão iniciadas
 
-  @validado
+  @validado @teste1
   Cenário: Deve obter a lista de usuários
     Dado que acesso a rota "/users"
     Quando busco a lista de usuários na rota
     Então é retornado para a requisição o status code "200"
 
-  @validado
+  @validado @teste2
   Esquema do Cenário: Deve obter a lista de usuários com queryParam
     Dado que acesso a rota "<rota>"
     Quando busco a lista de usuários por queryParam
@@ -24,12 +24,12 @@ Funcionalidade: Validar alguns endpoints
 
     Exemplos:
     |rota   |usuario |id  |status |
-    |/users |Michael |7   |200    |
-    |/users |Tobias  |9   |200    |
+    |/users |Micael  |7   |200    |
+    |/users |Tobi  |9   |200    |
 
 
-  @validado
+  @validado @teste3
   Cenário: Deve inserir usuário
     Dado que acesso a rota "/users"
     Quando insiro um usuário
-    Então é retornado para a requisição o status code "201"
+    Então é retornado para a requisição o status code "202"

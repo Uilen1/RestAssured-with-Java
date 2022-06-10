@@ -37,7 +37,6 @@ public class ExampleStep {
         try {
             validatableResponse =
                     given()
-                    .when()
                         .get(rota)
                     .then()
                         .log().all()
@@ -68,7 +67,8 @@ public class ExampleStep {
     @Quando("insiro um usuário")
     public void insiroUmUsuário() throws Exception {
         try {
-            validatableResponse = given()
+            validatableResponse =
+                    given()
                         .body(baseStep.getExampleBean)
                     .when()
                         .post(rota)
